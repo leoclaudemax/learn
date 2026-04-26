@@ -1622,12 +1622,7 @@ const SWISSTOPO_TILE = {
   maxNativeZoom: 18
 };
 
-const FRANCE_TILE = {
-  url: "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_light_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
-  attribution: '&copy; <a href="https://www.bkg.bund.de/">BKG</a> <a href="https://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
-  maxZoom: 18,
-  maxNativeZoom: 18
-};
+const FRANCE_TILE = SWISSTOPO_TILE;
 
 const BKG_GERMANY_TILE = {
   url: "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_light_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
@@ -1668,7 +1663,7 @@ const MODULES = {
     zoom: 6,
     exploreCenter: [46.55, 2.40],
     exploreZoom: 6,
-    sourceText: "Map with borders and waters for France. Correct radius: 5 km.",
+    sourceText: "swisstopo-style map for France training. Correct radius: 5 km.",
     favoritesTitle: "Select French Cities",
     favoriteSearch: "Search cities..."
   },
