@@ -1622,12 +1622,18 @@ const SWISSTOPO_TILE = {
   maxNativeZoom: 18
 };
 
-const CARTO_LIGHT_TILE = {
-  url: "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: "abcd",
-  maxZoom: 20,
-  maxNativeZoom: 20
+const IGN_FRANCE_TILE = {
+  url: "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&FORMAT=image/png&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+  attribution: '&copy; <a href="https://www.ign.fr/">IGN</a> / <a href="https://cartes.gouv.fr/">cartes.gouv.fr</a>',
+  maxZoom: 18,
+  maxNativeZoom: 18
+};
+
+const BKG_GERMANY_TILE = {
+  url: "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_light_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
+  attribution: '&copy; <a href="https://www.bkg.bund.de/">BKG</a> <a href="https://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
+  maxZoom: 18,
+  maxNativeZoom: 18
 };
 
 const MODULES = {
@@ -1657,12 +1663,12 @@ const MODULES = {
     waterPoints: [],
     info: FR_INFO,
     visualCues: {},
-    tile: CARTO_LIGHT_TILE,
+    tile: IGN_FRANCE_TILE,
     center: [46.55, 2.40],
     zoom: 6,
     exploreCenter: [46.55, 2.40],
     exploreZoom: 6,
-    sourceText: "Label-free map for France and surrounding Europe via CARTO / OpenStreetMap. Correct radius: 5 km.",
+    sourceText: "Official IGN / cartes.gouv.fr map of France. Correct radius: 5 km.",
     favoritesTitle: "Select French Cities",
     favoriteSearch: "Search cities..."
   },
@@ -1674,12 +1680,12 @@ const MODULES = {
     waterPoints: [],
     info: DE_INFO,
     visualCues: {},
-    tile: CARTO_LIGHT_TILE,
+    tile: BKG_GERMANY_TILE,
     center: [51.10, 10.40],
     zoom: 6,
     exploreCenter: [51.10, 10.40],
     exploreZoom: 6,
-    sourceText: "Label-free map for Germany and surrounding Europe via CARTO / OpenStreetMap. Correct radius: 5 km.",
+    sourceText: "Official BKG TopPlusOpen Light Grau map for Germany. Correct radius: 5 km.",
     favoritesTitle: "Select German Cities",
     favoriteSearch: "Search cities..."
   }
